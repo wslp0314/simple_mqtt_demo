@@ -132,13 +132,6 @@
 		9C9B35F0260DCBC4008A7FE7 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		9C9B35F1260DCBC4008A7FE7 /* NetworkUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkUtil.h; sourceTree = "<group>"; };
 		9C9B35F2260DCBC4008A7FE7 /* WifiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WifiManager.h; sourceTree = "<group>"; };
-		9C9B35F4260DCBC4008A7FE7 /* MQTTClientModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTClientModel.m; sourceTree = "<group>"; };
-		9C9B35F5260DCBC4008A7FE7 /* MQTTPackage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTPackage.h; sourceTree = "<group>"; };
-		9C9B35F6260DCBC4008A7FE7 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
-		9C9B35F8260DCBC4008A7FE7 /* LNMqttClientModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNMqttClientModel.h; sourceTree = "<group>"; };
-		9C9B35F9260DCBC4008A7FE7 /* LNMqttClientModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNMqttClientModel.m; sourceTree = "<group>"; };
-		9C9B35FA260DCBC4008A7FE7 /* MQTTClientModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTClientModel.h; sourceTree = "<group>"; };
-		9C9B35FB260DCBC4008A7FE7 /* MQTTPackage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTPackage.m; sourceTree = "<group>"; };
 		9C9B360D260DCF7A008A7FE7 /* ReconnectTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReconnectTimer.h; sourceTree = "<group>"; };
 		9C9B360E260DCF7A008A7FE7 /* MQTTSSLSecurityPolicyTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTSSLSecurityPolicyTransport.m; sourceTree = "<group>"; };
 		9C9B360F260DCF7A008A7FE7 /* MQTTCoreDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTCoreDataPersistence.h; sourceTree = "<group>"; };
@@ -239,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				9C9B360A260DCF7A008A7FE7 /* MQTTClient */,
-				9C9B35F3260DCBC4008A7FE7 /* MQTT */,
 				9C9B35EC260DCBC4008A7FE7 /* Network */,
 				9C9B3489260D933B008A7FE7 /* AppDelegate.h */,
 				9C9B348A260D933B008A7FE7 /* AppDelegate.m */,
@@ -365,28 +357,6 @@
 				9C9B35F2260DCBC4008A7FE7 /* WifiManager.h */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		9C9B35F3260DCBC4008A7FE7 /* MQTT */ = {
-			isa = PBXGroup;
-			children = (
-				9C9B35FA260DCBC4008A7FE7 /* MQTTClientModel.h */,
-				9C9B35F4260DCBC4008A7FE7 /* MQTTClientModel.m */,
-				9C9B35F5260DCBC4008A7FE7 /* MQTTPackage.h */,
-				9C9B35FB260DCBC4008A7FE7 /* MQTTPackage.m */,
-				9C9B35F6260DCBC4008A7FE7 /* Service.h */,
-				9C9B35F7260DCBC4008A7FE7 /* LNMQTT */,
-			);
-			path = MQTT;
-			sourceTree = "<group>";
-		};
-		9C9B35F7260DCBC4008A7FE7 /* LNMQTT */ = {
-			isa = PBXGroup;
-			children = (
-				9C9B35F8260DCBC4008A7FE7 /* LNMqttClientModel.h */,
-				9C9B35F9260DCBC4008A7FE7 /* LNMqttClientModel.m */,
-			);
-			path = LNMQTT;
 			sourceTree = "<group>";
 		};
 		9C9B360A260DCF7A008A7FE7 /* MQTTClient */ = {
