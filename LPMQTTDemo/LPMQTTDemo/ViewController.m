@@ -50,7 +50,7 @@
 }
 
 
-#pragma mark - 发布消息
+#pragma mark - 订阅频道
 - (void) subscribeTopic:(MQTTSession *)session ToTopic: (NSString *)topicUrl {
     [session subscribeToTopic:topicUrl atLevel:MQTTQosLevelAtMostOnce subscribeHandler:^(NSError *error, NSArray<NSNumber *> *gQoss) {
         if (error) {
@@ -59,6 +59,12 @@
             NSLog(@"连接成功: %@",gQoss);
             self.time = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(sendMessage) userInfo:nil repeats:YES];
         }
+    }];
+}
+
+#pragma mark - 发送数据
+- (void) sendMessage {
+    [self.session publishData:[@"ping" dataUsingEncoding:NSUTF8StringEncoding] onTopic:@"ivicar_iov/ping/LSEC-2090aa77f71e59c2fc55106729118711" retain:YES qos:MQTTQosLevelExactlyOnce publishHandler:^(NSError *error) {
     }];
 }
 
@@ -72,7 +78,6 @@
         self.time = nil;
     }
 }
-
 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -98,11 +103,6 @@
         default:
         break;
     }
-}
-
-- (void) sendMessage {
-    [self.session publishData:[@"ping" dataUsingEncoding:NSUTF8StringEncoding] onTopic:@"ivicar_iov/ping/LSEC-2090aa77f71e59c2fc55106729118711" retain:YES qos:MQTTQosLevelExactlyOnce publishHandler:^(NSError *error) {
-    }];
 }
 
 
