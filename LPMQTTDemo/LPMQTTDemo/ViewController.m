@@ -7,7 +7,7 @@
 #import "ViewController.h"
 #import "MQTTClient.h"
 
-@interface ViewController ()<MQTTSessionManagerDelegate,MQTTSessionDelegate>
+@interface ViewController ()<MQTTSessionDelegate>
 @property (strong, nonatomic) MQTTSessionManager *manager;
 @property (nonatomic, strong) MQTTSession *session;
 @property (strong, nonatomic) NSTimer *time;
